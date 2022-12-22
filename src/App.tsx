@@ -1,5 +1,6 @@
 import React, { FC, useState, ChangeEvent } from "react";
 import "./App.css";
+import TodoTask from "./Components/TodoTask";
 import { ITask } from "./Interfaces";
 
 const App: FC = () => {
@@ -45,7 +46,9 @@ const App: FC = () => {
       </div>
 
       <div className="todoList">
-        
+        {todoList.map((task: ITask, key: number) => {
+          return <TodoTask key={key} task={task}/> 
+        })}
 
       </div>
     </div>
