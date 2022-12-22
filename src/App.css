@@ -14,11 +14,18 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  flex-direction: column;
 }
 
 .header .inputContainer {
   display: flex;
   flex-direction: column;
+}
+
+.header .inputs {
+  display: flex;
+  flex-direction: row;
+  position: absolute;
 }
 
 .header input {
@@ -34,7 +41,7 @@
 .header button {
   width: 70px;
   height: 87px;
-  border:none;
+  border: none;
   border-bottom-right-radius: 8px;
   border-top-right-radius: 8px;
   padding-left: 10px;
@@ -50,15 +57,15 @@
   flex-direction: column;
 }
 
-.task{
+.task {
   width: 500px;
   height: 50px;
   display: flex;
-  color:white;
+  color: white;
   margin: 15px;
 }
 
-.task .content{
+.task .content {
   flex: 80%;
   height: 100%;
   display: flex;
@@ -86,4 +93,22 @@
   border-bottom-right-radius: 8px;
   color: white;
   cursor: pointer;
+}
+
+.header span.inputError {
+  display: inline-block;
+  position: relative;
+  top: 60px;
+}
+
+.animateError{
+  animation: shake .3s 3;
+}
+
+@keyframes shake {
+  0% {transform: translateX(0)}
+  25% {transform: translateX(10px);}
+  50% {transform: translateX(0px);}
+  75% {transform: translateX(-10px);}
+  100% {transform: translateX(0px);}
 }
